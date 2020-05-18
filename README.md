@@ -5,6 +5,8 @@
   A calculator which calculates sales tax and tax rate with a minimalist design.
 </p>
 
+![image](https://user-images.githubusercontent.com/57364855/82267492-249e7380-9932-11ea-8308-e944c9672d70.png)
+
 
 ## What is this and How it is created?
 I write a very simple HTML and CSS UI for a sales tax calculator web application with the addition of some simple JavaScript behaviors to my HTML/CSS file which will enable the buttons to work and calculate the tax and total for you.
