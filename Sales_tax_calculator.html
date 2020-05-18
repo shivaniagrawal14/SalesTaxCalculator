@@ -1,0 +1,164 @@
+<!DOCTYPE html> 
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head> 
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8" />
+<title>Lab 1</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+<div id="Container">
+<div id="sales-heading">
+<header>
+SHIVANI AGRAWAL
+<H1> SALES TAX CALCULATOR </H1>
+</header>
+</div>
+
+
+</head>
+
+<body>
+
+<div id="sales-main">
+       
+<p>Enter Subtotal and TaxRate and click the calculate button to show the sales tax amount and the total. Click the clear button to clear out all form fields. 
+Tax Rate should be a percentage but donot enter a % sign in the tax rate box </p>
+
+
+<div id="sales-main1">
+  
+  <label> Subtotal: </label>
+                
+  <input type="text" class="sale" id="subtotal">
+  <br><br>
+
+
+  
+  <label> Tax Rate: </label>
+  
+  <input type="text" class="sale" id="taxrate">
+  <br><br>
+  
+  <label> Sales Tax: </label>
+  
+  <input type="text" class="sale" id="salestax" disabled>
+  <br><br>
+  
+  <label> Total:  </label>
+  
+  <input type="text" class="sale" id="total" disabled><br><br>
+                   
+
+ <!-- <input type="button" id="calculate" value="Calculate Tax and Order Total"> -->
+  <button id="s" type="button" class="btn btn-primary" onclick="taxfield()">Calculate Tax and Order Total</button>
+  
+  <input type="button" id="clear" value="Clear" onclick="clrfield()">
+
+ 
+
+    </div>
+        
+    </div>
+    <div>
+       
+<div id= "image">
+<img src="salestax.jpeg" alt="Sales">
+</div>
+ 
+<div id="foot">
+<footer>&copy;2020 Shivani Agrawal | sagrawal3@hawk.iit.edu</footer>
+</div>
+</div>
+
+
+<script>
+
+window.addEventListener("load", onLoad);
+function onLoad()
+{
+ document.getElementByID("s").addEventListener("click", taxfield);
+
+  document.getElementByID("clear").addEventListener("click", clrfield);
+}
+
+
+
+function taxfield() 
+{
+
+var p = document.getElementById("subtotal").value;
+var r = parseFloat(document.getElementById("taxrate").value);
+
+
+if(p < 0) 
+{
+alert("Subtotal should not be negative");
+ /*document.getElementById("subtotal").value = "";
+  document.getElementById("taxrate").value = "";
+  document.getElementById("salestax").value = "";
+  document.getElementById("total").value = "";
+  */
+
+}
+
+if((0 > r ) || ( r > 20))
+{
+alert("Taxrate should be in the range which means either taxrate should be less than 20 or greater than 0 ");
+}
+
+if(p == "")
+{
+	alert("Please enter some value");
+}
+
+if(p>0)
+    {
+        if(r>0)
+        {
+            if(r<20)
+            {
+            	console.log("hello");
+                p = (p * r) / 100;
+            	total = parseInt(p) + parseInt(r);
+        
+            	document.getElementById("salestax").value = p;
+            	document.getElementById("total").value = total;
+            }
+        }
+       
+    }
+
+
+/*
+
+else
+{
+
+var st = (r / 100) * p;
+document.getElementById("salestax").value = st;
+var tot = p + st;
+document.getElementById("total").value = tot;
+} 
+*/  
+}
+
+
+
+function clrfield() 
+{
+  document.getElementById("subtotal").value = "";
+  document.getElementById("taxrate").value = "";
+  document.getElementById("salestax").value = "";
+  document.getElementById("total").value = "";
+}
+
+
+
+</script>
+
+
+</body>
+</html>
