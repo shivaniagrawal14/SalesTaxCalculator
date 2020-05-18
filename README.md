@@ -5,7 +5,8 @@
   A calculator which calculates sales tax and tax rate with a minimalist design.
 </p>
 
-![image](https://user-images.githubusercontent.com/57364855/82267492-249e7380-9932-11ea-8308-e944c9672d70.png)
+![image](https://user-images.githubusercontent.com/57364855/82267610-8068fc80-9932-11ea-99ae-edeec5a4734e.png)
+
 
 
 ## What is this and How it is created?
